@@ -1,14 +1,16 @@
 import React from 'react';
+import MineField from "./components/MineField";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+    return (
+        <div className="App">
+            <header className="App-header">
 
-
-      </header>
-    </div>
-  );
+                <MineField/>
+            </header>
+        </div>
+    );
 }
 
 export default App;
