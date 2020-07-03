@@ -9,7 +9,7 @@ function ClickZone(props) {
         }} className="pure-button"
                        style={{
                            paddingLeft: "15px", height: "40px", width: "45px", textAlign: "left"
-                       }}>&nbsp;</button>
+                       }}>&nbsp; </button>
     } else {
         return (
             <button onClick={event => {
@@ -17,8 +17,12 @@ function ClickZone(props) {
                 props.handler(props.id)
             }} className="pure-button"
                     style={{
-                        paddingLeft: "15px", height: "40px", width: "45px", textAlign: "left"
-                    }}>{props.value} </button>
+                        paddingLeft: "15px",
+                        height: "40px",
+                        width: "45px",
+                        textAlign: "left",
+                        background: props.value === "x" ? "#99d8d0":"#f54291"
+                    }}>&nbsp; </button>
         )
     }
 }
