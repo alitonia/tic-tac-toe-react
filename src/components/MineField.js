@@ -126,7 +126,7 @@ function MineField(props) {
                 <h3 style={{marginLeft: "0.5%"}}>The winner is {winner}</h3>
 
                 <button className={"pure-button"}
-                        style={{background: "#f1c5c5", marginLeft: "3%"}}
+                        style={{background: "#f1c5c5", marginLeft: "8%"}}
                         onClick={() => reset()}>Reset
                 </button>
             </>
