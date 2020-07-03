@@ -6,13 +6,19 @@ function ClickZone(props) {
         return <button onClick={event => {
             event.preventDefault();
             props.handler(props.id)
-        }} className="pure-button" style={{height:"40px", width:"45px",textAlign: "left"}}>&nbsp;</button>
+        }} className="pure-button"
+                       style={{
+                           paddingLeft: "15px", height: "40px", width: "45px", textAlign: "left"
+                       }}>&nbsp;</button>
     } else {
         return (
             <button onClick={event => {
                 event.preventDefault();
                 props.handler(props.id)
-            }} className="pure-button" style={{height:"40px", width:"45px",textAlign: "left"}}>{props.value} </button>
+            }} className="pure-button"
+                    style={{
+                        paddingLeft: "15px", height: "40px", width: "45px", textAlign: "left"
+                    }}>{props.value} </button>
         )
     }
 }
