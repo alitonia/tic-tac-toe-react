@@ -2,13 +2,17 @@ import React, {useState} from 'react';
 
 function ClickZone(props) {
 
-    if (props.value == "") {
-        return <button onClick={event => props.handler(props.id)}
-                       disabled={props.value == "" ? false : true}>&nbsp;</button>
+    if (props.value === "") {
+        return <button onClick={event => {
+            event.preventDefault();
+            props.handler(props.id)
+        }} className="pure-button">&nbsp;&nbsp;</button>
     } else {
         return (
-            <button onClick={event => props.handler(props.id)}
-                    disabled={props.value == "" ? false : true}>{props.value}</button>
+            <button onClick={event => {
+                event.preventDefault();
+                props.handler(props.id)
+            }} className="pure-button">{props.value}</button>
         )
     }
 }
